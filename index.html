@@ -1,244 +1,72 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
-	<title>My Boostrap Page</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" type="text/css" href="style.css">
-<link href="https://fonts.googleapis.com/css?family=Modern+Antiqua" rel="stylesheet">
-
+	<title>TIC TAC TOE</title>
 </head>
+
+<style type="text/css">
+	*{
+		user-select: none;
+	}
+	.container{
+		height: 300px;
+		width: 300px;
+		border: 2px solid grey;
+		align-items: center;
+		border-radius: 5px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;	
+		margin: 40px auto;
+	}
+
+	.box{
+		height: 30%;
+		width: 30%;
+		border: 1px solid grey;	
+		border-radius: 5px;
+		background-color: cornsilk;	
+	}
+
+	button{
+		display: block;
+		margin: 5px auto;
+	}
+	h2{
+		margin-left: 45%;
+		color: red ;
+	}
+	span{
+		font-size: 40px;
+		color: pink;
+		padding-top: 17px; 
+		display: inline-block; 
+		margin-left: 35%;
+	}
+
+</style>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+	
+<h2 id='gameMsg'> Tic Tac Toe</h2>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Product
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="https://www.lazada.com.my/shop-women-clothing/"
-          target="blank">Womens</a>
-          <a class="dropdown-item" href="https://www.lazada.com.my/shop-men-clothing/" target="blank">Mens</a>
-          <a class="dropdown-item" href="https://www.lazada.com.my/catalog/?q=kids&_keyori=ss&from=input&spm=a2o4k.10707594.search.go.1ea85b7buUgb6O/" target="blank">Kids</a>
-          <a class="dropdown-item" href="#">Others</a>
-        </div>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="https://www.google.com/search?q=pricing&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjR_MbCht_cAhXKeX0KHVUKBMAQ_AUICigB&biw=1366&bih=613/" target="blank">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://www.coca-colaindia.com/content/dam/journey/in/en/private/faqs/contact-us2.jpg/" target="blank">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://steemitimages.com/DQmPfGvYUqg9TUsaK8EUegqL2gVGR8FSS67FtYRs86UfUP1/help-and-support.png/" target="blank">Help</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
-    </form>  
-  </div>
-</nav>
-
-<div class="Picture">
-<ul id="Content" class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Shoes</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Clothes</a>
-  </li>
-  <li class="nav-item"> 
-    <a class="nav-link" href="#">Accessories</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Others</a>
-  </li>
-</ul>
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="watch2.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="sport sheos.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="mixmix.jpg" alt="Third slide">
-    </div>
-  </div>
-</div>
+<div class='container' >
+	<div onclick='play(this, 1)' id='0' class='box'></div>
+	<div onclick='play(this, 2)' id='1' class='box'></div>
+	<div onclick='play(this, 4)' id='2' class='box'></div>
+	<div onclick='play(this, 8)' id='3' class='box'></div>
+	<div onclick='play(this, 16)' id='4' class='box'></div>
+	<div onclick='play(this, 32)' id='5' class='box'></div>
+	<div onclick='play(this, 64)' id='6' class='box'></div>
+	<div onclick='play(this, 128)' id='7' class='box'></div>
+	<div onclick='play(this, 256)' id='8' class='box'></div>
+	
 </div>
 
-<h2>Category</h2>
+<button onclick="resetGame()">Reset</button>
 
-<div class="d-flex flex-row" style="margin: 6%">
-<div class="box d-flex flex-column text-center mr-auto" id="box1">
-  <img src="jeans.jpg" class="images-row" id="test" >
-  <p class="text-warning font-weight-bold">Jeans</p>
-</div>
-
-     <div class="box d-flex flex-column text-center mr-auto" id="bos2">
-      <img src="bags.jpg" class="images-row ">
-      <p class="text-danger font-weight-bold ">Bags</p>
-    </div>
-
-    <div class="box d-flex flex-column text-center mr-auto" id="bos3">
-      <img src="shirts.jpg" class="images-row">
-      <p class="text-warning font-weight-bold ">Shirts</p> 
-    </div>
-
-    <div class="box d-flex flex-column text-center mr-auto" id="box4">
-      <img src="t-shirt.jpg" class="images-row">
-      <p class="text-danger font-weight-bold ">T-shirts</p>
-  </div>
-  </div>
-
-   <br>
-
-<div class="container-fluid mx-auto">
-  <div class="row mx-auto">
-<div class="card col-sm-3" style="width: 18rem;">
-  <img class="card-img-top" src="earing.jpg">
-  <div class="card-body">
-    <h5 class="card-title">M Brand Earing</h5>
-    <p class="card-text">Korea new style women earing.</p>
-    <a href="https://www.lazada.com.my/products/scrub-round-button-black-and-white-new-fashion-earrings-i241055034-s316735452.html?spm=a2o4k.searchlist.bestshown_1.1.44b5785cMBlORP&search=1/" target="blank" class="btn btn-primary">More Details</a>
-  </div>
-</div>
-<div class="card col-sm-3" style="width: 18rem;">
-  <img class="card-img-top" src="watch.jpg">
-  <div class="card-body">
-    <h5 class="card-title">XXX Watch</h5>
-    <p class="card-text">New season x Brand watch</p>
-    <a href="https://www.lazada.com.my/products/1-pair-of-couple-wrist-watch-casual-pu-leather-round-dial-watchband-black-i117983122-s123971415.html?spm=a2o4k.searchlist.list.17.58f245a07XJLkg&search=1/" target="blank" class="btn btn-primary">More Details</a>
-  </div>
-</div>
-<div class="card col-sm-3" style="width: 18rem;">
-  <img class="card-img-top" src="sheos2.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">N Sheos</h5>
-    <p class="card-text">Unisex new running sheos</p>
-    <a href="https://www.lazada.com.my/products/icq-men-sports-shoes-breathable-flying-weaving-mesh-shoes-comfortableleisureblack-i200763167-s247410394.html?spm=a2o4k.searchlist.list.1.7ab76b20dMMT8Z&search=1/" target="blank" class="btn btn-primary">More Details</a>
-  </div>
-</div><div class="card col-sm-3" style="width: 18rem;">
-  <img class="card-img-top" src="scaft.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Berry Scarf</h5>
-    <p class="card-text">2018 X'mas new season  scarf.</p>
-    <a href="https://www.lazada.com.my/products/harry-potter-vouge-house-cosplay-knit-wool-costume-scarf-wrap-gryffindor-i7938633-s9669330.html?spm=a2o4k.searchlist.list.9.20f86a76sxkTZa&search=1/" target="blank" class="btn btn-primary">More Details</a>
-  </div>
-</div>
-</div>
-</div>
-
-<br>
-
-<h4 class="text-success">Payment Methods</h4>
-<div class="img-thumbnail">
-<img src="cimb.jpg ">
-<img src="visa.jpg">
-<img src="maybank.png">
-<img src="alipay.png">
-</div>
-
-
-
-<!-- Footer -->
-<footer class="page-footer font-small pt-4" style="background-color: lightgrey">
-
-    <!-- Footer Links -->
-    <div class="container-fluid  text-md-left">
-
-      <!-- Grid row -->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase">Exclusive Deals and Offers!</h5>
-          <p>Subscribe and be the first to get great deals!.</p>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">How to Buy</a>
-              </li>
-              <li>
-                <a href="#!">Term&Condition</a>
-              </li>
-              <li>
-                <a href="#!">Private Policy</a>
-              </li>
-              <li>
-                <a href="#!">Press Media</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Help Center</a>
-              </li>
-              <li>
-                <a href="#!">Shipping&Delivery</a>
-              </li>
-              <li>
-                <a href="#!">Product Policy</a>
-              </li>
-              <li>
-                <a href="#!">Questions</a>
-              </li>
-            </ul>
-          
-
-          </div>
-          <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/bootstrap-tutorial/"> VBootstrapTest.com</a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <!-- Footer -->  
+<script src="script.js"></script>
 
 </body>
-</html>
+</html> 
+
